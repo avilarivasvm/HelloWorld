@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BoardGames xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BoardGame>
+    <Id>1</Id>
+    <NameGame>hi</NameGame>
+    <Brand>hasbro</Brand>
+    <FromAge>1</FromAge>
+    <ImageAddress>qw</ImageAddress>
+  </BoardGame>
+  <BoardGame>
+    <Id>2</Id>
+    <FromAge>2</FromAge>
+  </BoardGame>
+</BoardGames>
