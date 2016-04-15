@@ -15,23 +15,28 @@ namespace ApiInterviewDevTest.Repo
 {
     public class Repository : IRepository<BoardGame>
     {
-        private readonly List<BoardGame> lsBoardGames;
+        private List<BoardGame> lsBoardGames;
+        //string imagesDirectory = HttpRuntime.AppDomainAppPath;
         private string filePath = HttpContext.Current.Server.MapPath("~\\DATA\\BoardGames.xml");
+
 
         public Repository()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<BoardGame>), new XmlRootAttribute("BoardGames"));
-            if (File.Exists(filePath ))
+            if (File.Exists(filePath))
             {
-                using (StreamReader myWriter = new StreamReader(filePath))
+                using (StreamReader sr= new StreamReader(filePath ))
                 {
-                    lsBoardGames = (List<BoardGame>)serializer.Deserialize(myWriter);
-                    myWriter.Close();
+                    lsBoardGames = (List<BoardGame>)serializer.Deserialize(sr);
+                    sr.Close();
                 }
             }
             else
             {
+                DirectoryInfo di = Directory.CreateDirectory(filePath);
+                di = null;
                 lsBoardGames = new List<BoardGame>();
+                saveChanges();
             }
         }
 
@@ -42,11 +47,22 @@ namespace ApiInterviewDevTest.Repo
 
         public IEnumerable<BoardGame> getAllBoardGames()
         {
-            return lsBoardGames.ToList();
+            lsBoardGames = (List<BoardGame>)lsBoardGames.OrderBy(bg => bg.NameGame).ToList();
+            return lsBoardGames;
         }
 
         public bool add(BoardGame boardGame)
         {
+            if (lsBoardGames.Count > 0)
+            {
+                lsBoardGames = (List<BoardGame>)lsBoardGames.OrderByDescending(bg => bg.Id).ToList();
+                BoardGame tempBoardGame = lsBoardGames[0];
+                boardGame.Id = tempBoardGame.Id + 1;
+            }
+            else
+            {
+                boardGame.Id = 1;
+            }
             lsBoardGames.Add(boardGame);
             return true;
         }

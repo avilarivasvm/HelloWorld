@@ -1,0 +1,77 @@
+﻿@model InterviewDevTest.Models.BoardGame
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+@Html.HiddenFor(model => model.Id)
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BoardGame</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameGame)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameGame)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageAddress)
+        </dd>
+
+    </dl>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input id="btnRemove" value="Delete" class="btn btn-default" onclick="removeBoardGame()" />
+        </div>
+    </div>
+
+    @Html.ActionLink("Back to List", "Index")
+
+</div>
+
+
+
+<script type="text/javascript">
+    function removeBoardGame() {
+        var error = "";
+        var boardGame = new Object();
+        boardGame.id = $("#Id").val()
+        
+            $.ajax({
+                type: "POST",
+                data: JSON.stringify(boardGame),
+                url: "http://localhost:12081/api/boardGame/removeBoardGame/" + $("#Id").val(),
+                contentType: "application/json",
+                success: function () {
+                    window.location.href = "http://localhost:10482/";
+                }
+            });
+       
+    }
+</script>

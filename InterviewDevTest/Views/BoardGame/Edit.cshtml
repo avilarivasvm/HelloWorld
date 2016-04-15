@@ -1,0 +1,104 @@
+﻿@model InterviewDevTest.Models.BoardGame
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>BoardGame</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NameGame, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NameGame, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NameGame, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Brand, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Brand, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Brand, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FromAge, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FromAge, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FromAge, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImageAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ImageAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ImageAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="btnEdit" value="Edit" class="btn btn-default" onclick="edit()" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    function edit() {
+        var error = "";
+        var boardGame = new Object();
+        boardGame.id = $("#Id").val();
+        boardGame.nameGame = $("#NameGame").val();
+        boardGame.brand = $("#Brand").val();
+        boardGame.fromAge = $("#FromAge").val();
+        boardGame.imageAddress = $("#ImageAddress").val();
+        if (boardGame.nameGame == "") {
+            error +=  "Must type a name ";
+        }
+        if (boardGame.brand == "") {
+            error += "Must type a brand ";
+        }
+        if (boardGame.fromAge == "") {
+            error += "Must type minimal age ";
+        }
+        if (boardGame.imageAddress == "") {
+            error += "Must type image ";
+        }
+        if (error == "") {
+            $.ajax({
+                type: "POST",
+                data: JSON.stringify(boardGame),
+                url: "http://localhost:12081/api/boardGame/editBoardGame",
+                contentType: "application/json",
+                success: function () {
+                    window.location.href = "http://localhost:10482/";
+                }
+            });
+        }
+        else {
+            alert(error);
+        }
+    }
+</script>

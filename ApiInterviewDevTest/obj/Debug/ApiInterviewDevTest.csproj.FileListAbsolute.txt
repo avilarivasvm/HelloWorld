@@ -30,3 +30,39 @@ c:\users\propietario\documents\visual studio 2013\Projects\InterviewDevTest\ApiI
 c:\users\propietario\documents\visual studio 2013\Projects\InterviewDevTest\ApiInterviewDevTest\bin\Antlr3.Runtime.pdb
 c:\users\propietario\documents\visual studio 2013\Projects\InterviewDevTest\ApiInterviewDevTest\obj\Debug\ApiInterviewDevTest.dll
 c:\users\propietario\documents\visual studio 2013\Projects\InterviewDevTest\ApiInterviewDevTest\obj\Debug\ApiInterviewDevTest.pdb
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\ApiInterviewDevTest.dll.config
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\ApiInterviewDevTest.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\ApiInterviewDevTest.pdb
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\Antlr3.Runtime.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\Newtonsoft.Json.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Net.Http.Formatting.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Helpers.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Http.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Http.WebHost.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Mvc.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Optimization.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Razor.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.WebPages.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.WebPages.Razor.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\WebGrease.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\Newtonsoft.Json.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Net.Http.Formatting.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Helpers.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Http.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Http.WebHost.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Mvc.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Optimization.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Razor.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.WebPages.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.WebPages.Razor.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\Antlr3.Runtime.pdb
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\obj\Debug\ApiInterviewDevTest.csprojResolveAssemblyReference.cache
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\obj\Debug\ApiInterviewDevTest.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\obj\Debug\ApiInterviewDevTest.pdb
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Cors.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Http.Cors.dll
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\System.Web.Http.Cors.xml
+C:\Users\Propietario\Desktop\HelloWorld\ApiInterviewDevTest\bin\nunit.framework.dll
